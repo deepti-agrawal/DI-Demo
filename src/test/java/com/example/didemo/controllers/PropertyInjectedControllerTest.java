@@ -13,7 +13,7 @@ public class PropertyInjectedControllerTest {
     @Before
     public void setUp(){
         this.controller = new PropertyInjectedController();
-        this.controller.greetingService = new GreetingServiceImpl();
+        this.controller.greetingServiceImpl = new GreetingServiceImpl();
     }
 
     @Test

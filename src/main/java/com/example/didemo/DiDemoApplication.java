@@ -1,6 +1,7 @@
 package com.example.didemo;
 
 import com.example.didemo.controllers.ConstructorInjectedController;
+import com.example.didemo.controllers.MyController;
 import com.example.didemo.controllers.PropertyInjectedController;
 import com.example.didemo.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +14,7 @@ public class DiDemoApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 
+        System.out.println(ctx.getBean(MyController.class).sayHello());
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
