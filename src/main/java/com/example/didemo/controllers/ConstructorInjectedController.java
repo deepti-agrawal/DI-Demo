@@ -11,12 +11,12 @@ public class ConstructorInjectedController {
     public GreetingService greetingService;
 
     @Autowired
-    public ConstructorInjectedController(@Qualifier("constructorInjectedService") GreetingService greetingService){
+    public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService){
         this.greetingService = greetingService;
     }
 
     public String sayHello(){
-        return greetingService.sayHello();
+        return greetingService.sayGreeting();
     }
 
 }

@@ -11,11 +11,11 @@ public class SetterInjectedController {
     public GreetingService greetingService;
 
     @Autowired
-    public void setGreetingService(@Qualifier("setterInjectedService") GreetingService greetingService) {
+    public void setGreetingService(@Qualifier("setterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
     public String sayHello(){
-        return greetingService.sayHello();
+        return greetingService.sayGreeting();
     }
 }
